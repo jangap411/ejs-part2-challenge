@@ -32,19 +32,9 @@ const router = express.Router();
     ]
 }
 
-
-
 router.get('/challenge',(req, res)=>{
   console.log('challenge')
   res.render("challenge", data);
 });
-
-// for(let user of users){
-//   if(user.name == undefined) console.log('bad name');
-//   if (user.age == undefined) console.log("bad age");
-// }
-
-
-
 
 module.exports = router;
