@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+  <style>
+    ul li{
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+<body>
+  <h1>User here</h1>
+
+  <section>
+    <ul>
+    <% for(let user of users){ %>
+      <% if(user.name == undefined) { %>
+        <li>bad data</li>
+        <% } else if(user.age == undefined){ %>
+        
+          <li>Name: <%= user.name %> ,Age:Age missing ,Hobbies:<%= user.hobbies %></li>
+          <%} else if(user.hobbies == undefined){ %>
+            
+            <li>Name: <%= user.name %> ,Age:<%= user.age %> ,Hobbies:hobbies missing</li>
+            <% }else {%>
+              <li>Name: <%= user.name %> ,Age:<%= user.age %> ,Hobbies:<%= user.hobbies %></li>
+              <% } %>
+    <% }%>
+    </ul>
+  </section>
+  <footer>
+    <%- include('./partials/footer') %>
+  </footer>
+</body>
+</html>

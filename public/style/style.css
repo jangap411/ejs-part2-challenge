@@ -1,0 +1,11 @@
+body{
+  font-family:sans-serif;
+}
+
+footer p{
+  font-size:small;
+  min-height:20px;
+  background-color:aliceblue;
+  text-align: center;
+  width:100%;
+}
